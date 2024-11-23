@@ -1,0 +1,65 @@
+html {
+    background-color: #1a1a1a;
+}
+
+body {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+    background-color: #1a1a1a;
+    background-image: url('movies-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 60px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#movies {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 2rem;
+    margin: 0;
+    gap: 2rem;
+}
+
+#movies li {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(100% - 2rem);
+}
+
+#movies img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 576px) {
+    #movies li {
+        flex: 0 0 calc(50% - 2rem);
+    }
+}
+
+@media (min-width: 992px) {
+    #movies li {
+        flex: 0 0 calc(25% - 2rem);
+    }
+}
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
